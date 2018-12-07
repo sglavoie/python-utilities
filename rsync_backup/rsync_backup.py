@@ -269,7 +269,8 @@ if __name__ == '__main__':
     if ARGUMENTS.destination is not None:
         if os.path.isdir(ARGUMENTS.destination):
             DATA_DESTINATION = ARGUMENTS.destination
-        print("Please enter a valid destination.")
-        sys.exit(0)
+        else:
+            print("Please enter a valid destination.")
+            sys.exit(0)
 
     run_backup(data_sources=DATA_SOURCES)
